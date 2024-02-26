@@ -33,6 +33,7 @@ const App = () => {
       });
 
       // Clear input fields after submission
+
       setName('');
       setPhone('');
       setRegion('');
@@ -51,7 +52,7 @@ const App = () => {
     try {
       const response = await fetch(`${backEndURL}/get-saved`);
       const postsData = await response.json();
-      setPosts(postsData);
+      setPosts(postsData.reverse());
     } catch (error) {
       console.error(error);
     }
@@ -142,5 +143,3 @@ const App = () => {
 };
 
 export default App;
-
-
