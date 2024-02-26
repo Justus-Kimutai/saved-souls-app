@@ -9,7 +9,8 @@ const App = () => {
   const [village, setVillage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const backEndURL = process.env.BACKENDURL;
+  const backEndURL = 'https://evangelism.onrender.com';
+  // const backEndURL = process.env.;
 
   const handleSubmit = async () => {
     if (loading) {
