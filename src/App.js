@@ -9,14 +9,14 @@ const App = () => {
   const [village, setVillage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const backEndURL = 'https://evangelism.onrender.com';
+  const backEndURL = process.env.BACKENDURL;
 
   const handleSubmit = async () => {
     if (loading) {
       return; // Prevent multiple clicks when loading
     }
     setLoading(true)
-    
+
     if (!name || !phone || !region || !village) {
       alert('Fields cannot be empty');
       return;
